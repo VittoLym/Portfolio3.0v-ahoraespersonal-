@@ -6,7 +6,7 @@
 <template>
     <div>
         <article class="project">
-            <img src="../../assets/../assets/Moneywind.png" alt="Moneywind">
+            <img src="../../assets/MoneyWind.png" alt="Moneywind">
             <article class="datos">
                 <h2>Moneywind</h2>
                 <p>Una plataforma de gestión financiera intuitiva y eficiente, proporcionando herramientas esenciales para tomar el control de tus finanzas con facilidad.</p>
@@ -22,7 +22,7 @@
             </article>
         </article>
         <article class="project">
-            <img src="../../assets/../assets/AlgorithmcMarket.png" alt="Algorithmic Market">
+            <img src="../../assets/AlgorithmcMarket.png" alt="Algorithmic Market">
             <article class="datos">
                 <h2>Algorithmic Market</h2>
                 <p>Atractiva plataforma web que ofrece cursos de trading, combinando diseño elegante con contenido educativo para impulsar el éxito financiero.</p>
@@ -37,7 +37,7 @@
             </article>
             </article>
         <article class="project">
-            <img src="../../assets/../assets/MarvelApi.png" alt="Marvel Api">
+            <img src="../../assets/MarvelApi.png" alt="Marvel Api">
             <article class="datos">
                 <h2>Marvel Universe</h2>
                 <p>Explora el vasto universo Marvel con detalles sobre personajes, cómics y eventos. Una aplicación web informativa y visualmente atractiva.</p>
