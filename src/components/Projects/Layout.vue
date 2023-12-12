@@ -4,25 +4,29 @@ import Projects from './Projects.vue';
 const props = defineProps( ['toggleNav'] )
 const indicator = ref( null )
 const HeightTotal = window.innerHeight
+
 const visibilityNav = () => {
-    let distanceToTop = indicator.value.getBoundingClientRect().top
-    if ( distanceToTop <= HeightTotal / 2 ) {
+    let distanceToTop = indicator.value.getBoundingClientRect()
+    if ( distanceToTop.top <= HeightTotal / 2 ) {
         props.toggleNav( true )
     }
-    else if ( distanceToTop >= HeightTotal / 2 ) {
+    else if ( distanceToTop.top >= HeightTotal / 2 ) {
         props.toggleNav( false )
     }
 }
 onMounted( () => {
-    visibilityNav();
-    window.addEventListener( 'scroll', visibilityNav );
-} );
-
+        visibilityNav();
+        window.addEventListener( 'scroll', visibilityNav )
+});
+onBeforeUnmount(() => {
+  console.log('El componente se va a desmontar. Haciendo limpieza...');
+  // Puedes realizar acciones de limpieza aquí, como eliminar eventos o liberar recursos.
+});
 </script>
 <template>
-    <section class="container">
+    <section id="Projects" class="container">
         <main ref="indicator">
-            <h1 id="Projects">Projects</h1>
+            <h1>Projects</h1>
             <Projects />
         </main>
     </section>
@@ -36,7 +40,7 @@ onMounted( () => {
     display: flex;
     align-items: end;
     justify-content: center;
-    border-bottom: solid 10px #9370db;
+    border-bottom: solid 8px #9370db;
 }
 
 main {
@@ -49,6 +53,7 @@ main {
 }
 
 h1 {
+    width: 100%;
     text-align: start;
     font-size: 3rem;
     color: #C0C0C0;

@@ -6,49 +6,49 @@
 <template>
     <div>
         <article class="project">
-            <img src="../../assets/MoneyWind.png" alt="Moneywind">
+            <img src="../../assets/img/MoneyWind.png" alt="Moneywind">
             <article class="datos">
                 <h2>Moneywind</h2>
-                <p>Una plataforma de gestión financiera intuitiva y eficiente, proporcionando herramientas esenciales para tomar el control de tus finanzas con facilidad.</p>
+                <p>Intuitive and efficient financial management platform, providing essential tools to take control of your finances with ease.</p>
                 <ul>
-                    <li>Logica y administración de datos ingresado.</li>
-                    <li>Acesso a movimientos recientes.</li>
-                    <li>Minimalista y discreto.</li>
+                    <li>Logic and administration of entered data.</li>
+                    <li>Access to recent movements.</li>
+                    <li>Minimalist and discreet.</li>
                 </ul>
                 <article class="docs">
-                    <img @click="redirect('https://github.com/Vittossn/Moneywind')" src="../../assets/github.png" alt="Project in github">
-                    <img @click="redirect('https://moneywindd.netlify.app/')" src="../../assets/redirectico.svg" alt="">
+                    <img @click="redirect('https://github.com/Vittossn/Moneywind')" src="../../assets/img/github.png" alt="Project in github">
+                    <img @click="redirect('https://moneywindd.netlify.app/')" src="../../assets/img/redirectico.svg" alt="">
                 </article>
             </article>
         </article>
         <article class="project">
-            <img src="../../assets/AlgorithmcMarket.png" alt="Algorithmic Market">
+            <img src="../../assets/img/AlgorithmcMarket.png" alt="Algorithmic Market">
             <article class="datos">
                 <h2>Algorithmic Market</h2>
-                <p>Atractiva plataforma web que ofrece cursos de trading, combinando diseño elegante con contenido educativo para impulsar el éxito financiero.</p>
+                <p>Attractive web platform that offers trading courses, combining elegant design with educational content to boost financial success.</p>
                 <ul>
-                    <li>Alojamiento de videos en bunny.</li>
-                    <li>Login para usuarios utilizando Auth0.</li>
-                    <li>Compras integradas con Stripe.</li>
+                    <li>Bunny video hosting.</li>
+                    <li>Login for users using Auth0.</li>
+                    <li>Integrated purchases with Stripe.</li>
                 </ul>
                 <article class="docs">
-                    <img @click="redirect('https://algorithmic-market.com')" src="../../assets/redirectico.svg" alt="">
+                    <img @click="redirect('https://algorithmic-market.com')" src="../../assets/img/redirectico.svg" alt="">
                 </article>
             </article>
             </article>
         <article class="project">
-            <img src="../../assets/MarvelApi.png" alt="Marvel Api">
+            <img src="../../assets/img/MarvelApi.png" alt="Marvel Api">
             <article class="datos">
                 <h2>Marvel Universe</h2>
-                <p>Explora el vasto universo Marvel con detalles sobre personajes, cómics y eventos. Una aplicación web informativa y visualmente atractiva.</p>
+                <p>Explore the vast Marvel universe with details on characters, comics, and events. An informative and visually appealing web application.</p>
                 <ul>
-                    <li>Manejo de Peticiones a una Api Rest.</li>
-                    <li>Funcionalidad de Búsqueda Eficiente.</li>
-                    <li>Buena estetica acompañada de una excelente ux.</li>
+                    <li>Handling Requests to a Rest API.</li>
+                    <li>Efficient Search Functionality.</li>
+                    <li>Good aesthetics accompanied by excellent ux.</li>
                 </ul>
                 <article class="docs">
-                    <img src="../../assets/github.png" alt="Project in github">
-                    <img src="../../assets/redirectico.svg" alt="">
+                    <img @click="redirect('https://github.com/Vittossn/MarvelApi-3-')" src="../../assets/img/github.png" alt="Project in github">
+                    <img @click="redirect('http://universe-marvel.netlify.app')" src="../../assets/img/redirectico.svg" alt="Marvel universe">
                 </article>
             </article>
         </article>

@@ -1,12 +1,11 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onUnmounted } from 'vue';
 const dynamicText = ref(null)
 const prases = ['Frontend Dev','Backend Dev','Fullstack Dev','Rey del sexo','Junior Programer','Argentino','Re capo mal']
 
 let prasesIndex = 0;
 let charIndex = 0;
 let isDeleting = false
-
 const typeEffect = () => {
     const currentWord = prases[prasesIndex]
     const currentChar = currentWord.substring(0, charIndex)
@@ -88,7 +87,7 @@ const redirecRedes = (prop) =>{
         height: 100vh;
         width: 100vw;
         overflow: hidden;
-        background-image: url(../assets/prueba5.jpg);
+        background-image: url(../assets/img/prueba5.jpg);
         background-size: cover;
         display: flex;
         justify-content: center;

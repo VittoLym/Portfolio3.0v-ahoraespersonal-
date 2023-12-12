@@ -1,13 +1,22 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+const ul = ref(null)
+const ListA = ref([])
 const props = defineProps(['showNav'])
-const tagsHeader = ['Home','Projects','Skills','About Me']
+const tagsHeader = ['Home','Projects','Skills','About']
+const ulshow = () => {
+    const list = ul.value.querySelectorAll('li')
+}
+onMounted(()=>{
+    window.addEventListener('click', ulshow)
+})
 </script>
 <template>
     <header>
         <Transition name="visibility">
-            <ul v-if="showNav"  key="component" class="comp-animated">
+            <ul v-if="showNav"  key="component" class="comp-animated" ref="ul">
                 <li v-for="tag in tagsHeader" :key="tag">
-                <a :href="'#'+tag" >{{ tag }}</a>
+                <a :href="'#'+tag" ref="tagsHeader">{{ tag }}</a>
                 </li>
             </ul>
         </Transition>
@@ -15,6 +24,7 @@ const tagsHeader = ['Home','Projects','Skills','About Me']
 </template>
 <style scoped>
 header {
+    z-index: 100;
     height: 36vh;
     position: fixed;
     top: 32vh;
@@ -46,7 +56,7 @@ ul li {
     text-align: start;
 }
 ul li:hover{
-    transform: translateX(20px);
+    transform: translateX(15px);
 }
 .visibility-enter-active {
     transition: all 1s ease;
