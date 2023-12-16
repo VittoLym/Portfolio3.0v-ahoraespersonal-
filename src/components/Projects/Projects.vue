@@ -6,6 +6,21 @@
 <template>
     <div>
         <article class="project">
+            <img src="../../assets/img/AlgorithmcMarket.png" alt="Algorithmic Market">
+            <article class="datos">
+                <h2>Algorithmic Market</h2>
+                <p>Attractive web platform that offers trading courses, combining elegant design with educational content to boost financial success.</p>
+                <ul>
+                    <li>Bunny video hosting.</li>
+                    <li>Login for users using Auth0.</li>
+                    <li>Integrated purchases with Stripe.</li>
+                </ul>
+                <article class="docs">
+                    <img @click="redirect('https://algorithmic-market.com')" src="../../assets/img/redirectico.svg" alt="">
+                </article>
+            </article>
+            </article>
+        <article class="project">
             <img src="../../assets/img/MoneyWind.png" alt="Moneywind">
             <article class="datos">
                 <h2>Moneywind</h2>
@@ -21,21 +36,6 @@
                 </article>
             </article>
         </article>
-        <article class="project">
-            <img src="../../assets/img/AlgorithmcMarket.png" alt="Algorithmic Market">
-            <article class="datos">
-                <h2>Algorithmic Market</h2>
-                <p>Attractive web platform that offers trading courses, combining elegant design with educational content to boost financial success.</p>
-                <ul>
-                    <li>Bunny video hosting.</li>
-                    <li>Login for users using Auth0.</li>
-                    <li>Integrated purchases with Stripe.</li>
-                </ul>
-                <article class="docs">
-                    <img @click="redirect('https://algorithmic-market.com')" src="../../assets/img/redirectico.svg" alt="">
-                </article>
-            </article>
-            </article>
         <article class="project">
             <img src="../../assets/img/MarvelApi.png" alt="Marvel Api">
             <article class="datos">
@@ -64,7 +64,7 @@ div{
     height: 170vh;
 }
 .project {
-    background-color: #fae9e9;
+    background-color: #202020;
     height: 50vh;
     width: 80vw;
     border-radius: 1rem;
@@ -116,6 +116,7 @@ div{
     width: 90%;
     font-size: 1rem;
     text-align: start;
+    color: #ffff;
     text-wrap: wrap;
 }
 .datos ul{
@@ -126,30 +127,30 @@ div{
 }
 .datos ul li {
     padding: 0.2rem;
+    color: #ffff;
 }
 h3{
     font-family: Poppins, monospace;
     font-weight: 500;
-    color: #9370db;
-    width: 80%;
-    height: 40px;
-    line-height: 40px;
-    font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
-    outline: #9370db solid 2px;
-    border-radius: .8rem;
-    background-color: transparent;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0s;
-    overflow: hidden;
-    border: none;
     cursor: pointer;
-}
-h3:hover {
     color: rgb(255, 255, 255);
     scale: 1.1;
     box-shadow: rgba(193, 163, 98, 0.4) 0px 0px 20px;
     outline: none;
     border: none;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
     background-color: #9340db;
+    border-radius: .8rem;
+}
+h3:hover {
+    scale: 1.2;
+}
+h3:active {
+    scale: 1.1;
 }
 .docs{
     width:60%;

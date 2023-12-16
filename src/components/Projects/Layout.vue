@@ -33,14 +33,11 @@ onBeforeUnmount(() => {
 </template>
 <style scoped>
 .container {
-    height: 205vh;
+    height: 210vh;
     width: 100%;
-    background: rgb(24,24,24);
-    background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(36,36,36,1) 50%, rgba(24,24,24,1) 100%);
     display: flex;
     align-items: end;
     justify-content: center;
-    border-bottom: solid 8px #9370db;
 }
 
 main {

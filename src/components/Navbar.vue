@@ -37,7 +37,7 @@ ul{
 }
 
 ul li a {
-    color: #9370db;
+    color: #6d2def;
     text-decoration: none;
     transition: all ease .5s;
     font-size: 1.5rem;
