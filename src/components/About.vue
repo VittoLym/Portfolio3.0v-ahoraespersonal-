@@ -12,10 +12,10 @@
                     With expertise in technologies such as <span>JS, Vue, React, Node, Flutter,</span> eagerly awaiting new projects.
                 </p>
                 <p>
-                    "My focus is on creating engaging and minimalist experiences."
+                    My focus is on creating engaging and minimalist experiences.
                 </p>
                 <p>
-                    "Excited to work with you! 🚀💪"
+                    Excited to work with you! 🚀💪
                 </p>
             </article>
             <article class="Vitto">
