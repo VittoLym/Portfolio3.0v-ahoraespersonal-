@@ -5,8 +5,8 @@
 
 <template>
     <div id="About">
-        <section>
-            <h1>About</h1>
+        <section :class="isComputer ? '' : 'resSection'">
+            <h1 :class="isComputer ? '' : 'resh1'">About</h1>
             <article>
                 <p>
                     Freelance Web/Mobile Developer.
@@ -21,10 +21,10 @@
                     Excited to work with you! 🚀💪
                 </p>
             </article>
-            <article class="Vitto">
+            <article :class="isComputer ? 'Vitto' : 'resVitto'">
                 <a :class="isComputer ? '' : 'resA'" href="https://github.com/Vittossn" target="_blank"><h3>Github</h3> <img src="../assets/img/github.png" alt="Github Vitto"></a>
-                <a :class="isComputer ? '' : 'resA'" :href='CV' target="_blank"><h3>CV</h3><img src="../assets/img/cvImg.svg"  alt="cv Vitto"></a>
                 <a :class="isComputer ? '' : 'resA'" href="https://www.linkedin.com/in/alexander-javier-lopez-asson-949149247/" target="_blank"><h3>Linkedin</h3> <img src="../assets/img/linkedin.png" alt="Linkedin Vitto"></a>
+                <a :class="isComputer ? '' : 'resA'" :href='CV' target="_blank"><h3>CV</h3><img src="../assets/img/cvImg.svg"  alt="cv Vitto"></a>
             </article>
         </section>
     </div>
@@ -45,15 +45,21 @@ section{
     align-items: start;
     justify-content: flex-start;
 }
+.resSection{
+    margin: 0;
+}
 h1{
     font-size: 3rem;
     color: #C0C0C0;
+}
+.resh1{
+    margin-left: 2.8rem;
 }
 article{
     height: max-content;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
     margin-bottom: 2rem;
 }
@@ -63,8 +69,16 @@ article{
     flex-direction: row;
     flex-wrap: wrap;
 }
+.resVitto {
+    width: 100vw;
+    height: max-content;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 a {
-    width: 9rem;
+    font-size: .9rem;
+    width: max-content;
     margin: 0 1rem;
     text-decoration: none;
     color: #C0C0C0;
@@ -77,7 +91,7 @@ a {
     justify-content: center;
 }
 .resA{
-    margin: 2rem 0;
+    margin: 1rem 0.5rem;
 }
 a:hover{
     background-color: #9370db;
