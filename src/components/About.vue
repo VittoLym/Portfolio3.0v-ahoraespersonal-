@@ -31,9 +31,10 @@
 
 <style scoped>
 div{
-    height: 100vh;
+    height: max-content;
     display: flex;
     border-bottom: solid 8px #9370db;
+    padding-bottom: 2rem;
 }
 section{
     margin: 0 auto;
