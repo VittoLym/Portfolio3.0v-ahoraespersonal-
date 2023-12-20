@@ -6,11 +6,11 @@ const prases = ['Frontend Dev','Backend Dev','Fullstack Dev','Rey del sexo','Jun
 let prasesIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let vMenu = true;
+let isComputer = true;
 onBeforeMount(() => {
   const widthTotal = window.innerWidth
   if(widthTotal <= 600){
-    vMenu = false
+    isComputer = false
   }
 })
 const typeEffect = () => {
@@ -47,7 +47,7 @@ const redirecRedes = (prop) =>{
             <article>
             </article>
             <article>
-                <div class="main" v-if="vMenu">
+                <div class="main" v-if="isComputer">
                     <div class="up">
                         <button class="card1" @click="redirecRedes('https://github.com')">
                             <svg
