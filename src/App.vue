@@ -39,7 +39,7 @@ onMounted(()=>{
     <Navbar :showNav="showNav" :isComputer="isComputer" />
     <Header ref="header" :isComputer="isComputer"></Header>
     <Layout ref="layout" :toggleNav="toggleNav" :isComputer="isComputer"/>
-    <Skills ref="skills" />
+    <Skills ref="skills" :isComputer="isComputer"/>
     <About ref="about"/>
 </template>
 

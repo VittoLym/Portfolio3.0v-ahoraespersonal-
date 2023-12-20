@@ -1,7 +1,8 @@
 <script setup>
+ const props = defineProps(['isComputer'])
 </script>
 <template>
-    <aside class="div">
+    <aside class="div" v-if="props.isComputer">
     <section id="Skills">
         <h1>Skills</h1>
         <div class="container">
