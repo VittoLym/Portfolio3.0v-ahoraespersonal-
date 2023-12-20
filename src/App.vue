@@ -1,16 +1,24 @@
 <script setup>
-import { ref, onBeforeUnmount,onMounted } from 'vue';
+import { ref, onMounted, onBeforeMount } from 'vue';
 import Header from './components/Header.vue'
 import Layout from './components/Projects/Layout.vue'
 import Navbar from './components/Navbar.vue';
 import Skills from './components/Skills.vue';
 import About from './components/About.vue'
 import Pruba from './components/Pruba.vue';
+
 let showNav = ref(false)
+let isComputer = ref(true);
 
 const toggleNav = (valor) => {
   showNav.value = valor
 }
+onBeforeMount(() => {
+  const widthTotal = window.innerWidth
+  if(widthTotal <= 600){
+    isComputer.value = false
+  }
+})
 
 const header = ref(null)
 const layout = ref(null)
@@ -28,9 +36,9 @@ onMounted(()=>{
 </script>
 
 <template>
-    <Navbar :showNav="showNav"/>
-    <Header ref="header" ></Header>
-    <Layout ref="layout" :toggleNav="toggleNav" />
+    <Navbar :showNav="showNav" :isComputer="isComputer" />
+    <Header ref="header" :isComputer="isComputer"></Header>
+    <Layout ref="layout" :toggleNav="toggleNav" :isComputer="isComputer"/>
     <Skills ref="skills" />
     <About ref="about"/>
 </template>

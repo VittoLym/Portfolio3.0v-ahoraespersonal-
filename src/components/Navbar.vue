@@ -1,8 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 const ul = ref(null)
-const ListA = ref([])
-const props = defineProps(['showNav'])
+const props = defineProps(['showNav', 'isComputer'])
 const tagsHeader = ['Home','Projects','Skills','About']
 const ulshow = () => {
     const list = ul.value.querySelectorAll('li')
@@ -12,7 +11,7 @@ onMounted(()=>{
 })
 </script>
 <template>
-    <header>
+    <header v-if="props.isComputer">
         <Transition name="visibility">
             <ul v-if="showNav"  key="component" class="comp-animated" ref="ul">
                 <li v-for="tag in tagsHeader" :key="tag">

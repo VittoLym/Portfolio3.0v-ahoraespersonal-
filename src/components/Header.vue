@@ -1,18 +1,13 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue';
+const props = defineProps(['isComputer'])
 const dynamicText = ref(null)
 const prases = ['Frontend Dev','Backend Dev','Fullstack Dev','Rey del sexo','Junior Programer','Argentino','Re capo mal']
 
 let prasesIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let isComputer = true;
-onBeforeMount(() => {
-  const widthTotal = window.innerWidth
-  if(widthTotal <= 600){
-    isComputer = false
-  }
-})
+
 const typeEffect = () => {
     const currentWord = prases[prasesIndex]
     const currentChar = currentWord.substring(0, charIndex)
@@ -124,7 +119,7 @@ const redirecRedes = (prop) =>{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 26vw;
+        width: 30%;
         height: 100%;
     }
     .name{
@@ -132,7 +127,7 @@ const redirecRedes = (prop) =>{
     }
     p{
         text-align: start;
-        width: 70vw;
+        width: 50vw;
         margin-left: .5vw;
         font-size: 1.5rem;
         color: #C0C0C0;

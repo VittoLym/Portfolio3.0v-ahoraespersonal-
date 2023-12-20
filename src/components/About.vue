@@ -60,6 +60,7 @@ article{
     height: max-content;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 a {
     width: 9rem;

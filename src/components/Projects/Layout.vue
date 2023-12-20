@@ -1,7 +1,10 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+
 import Projects from './Projects.vue';
-const props = defineProps( ['toggleNav'] )
+import ProjectsMobile from './ProjectsMobile.vue';
+
+const props = defineProps( ['toggleNav', 'isComputer'] )
 const indicator = ref( null )
 const HeightTotal = window.innerHeight
 
@@ -27,13 +30,14 @@ onBeforeUnmount(() => {
     <section id="Projects" class="container">
         <main ref="indicator">
             <h1>Projects</h1>
-            <Projects />
+            <Projects v-if="isComputer"/>
+            <ProjectsMobile v-if="!isComputer"/>
         </main>
     </section>
 </template>
 <style scoped>
 .container {
-    height: 240vh;
+    height: max-content;
     width: 100%;
     display: flex;
     align-items: end;
