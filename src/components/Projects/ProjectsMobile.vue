@@ -88,7 +88,8 @@ div{
 }
 .datos h2{
     width: 90%;
-    text-align: end;
+    text-align: start;
+    padding-left: 1rem;
     font-size: 1.8rem;
     color: #9370db;
     font-weight: bolder;
