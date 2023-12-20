@@ -29,9 +29,18 @@ const watchComp = () =>{
   const layoutTopDistance = layout.value.$el.getBoundingClientRect().top;
   const skillsTopDistance = skills.value.$el.getBoundingClientRect().top;
 }
-
+const resizing = () => {
+  const widthTotal = window.innerWidth
+  if(widthTotal <= 600){
+    isComputer.value = false
+  }
+  if(widthTotal > 600){
+    isComputer.value = true
+  }
+}
 onMounted(()=>{
   window.addEventListener( 'scroll', watchComp )
+  window.addEventListener('resize', resizing)
 })
 </script>
 
