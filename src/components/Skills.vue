@@ -2,11 +2,11 @@
  const props = defineProps(['isComputer'])
 </script>
 <template>
-    <aside class="div" v-if="props.isComputer">
-    <section id="Skills">
-        <h1>Skills</h1>
-        <div class="container">
-            <article>
+    <aside class="div" >
+    <section id="Skills" :class="isComputer ? '':'sectionres'">
+        <h1 :class="isComputer ? '' : 'h1res'">Skills</h1>
+        <div >
+            <article :class="isComputer ? '' : 'articleres'">
                 <p>Frontend</p>
                 <div class="tecnologias">
                     <img src="../../src/assets/img/htmlImg.svg" alt="HTML5" title="HTML5">
@@ -17,7 +17,7 @@
                     <img src="../../src/assets/img/reactImg.svg" alt="React" title="React">
                 </div>
             </article>
-            <article>
+            <article :class="isComputer ? '' : 'articleres'">
                 <p>Backend</p>
                 <div class="tecnologias">
                     <img src="../../src/assets/img/nodeImg.svg" alt="Node" title="Node">
@@ -26,7 +26,7 @@
                     <img src="../../src/assets/img/mongooseImg.svg" alt="Mongoose" title="Mongoose">
                 </div>
             </article>
-            <article>
+            <article :class="isComputer ? '' : 'articleres'">
                 <p>Complementary</p>
                 <div class="tecnologias">
                     <img src="../../src/assets/img/figmaImg.svg" alt="Figma" title="Figma">
@@ -35,7 +35,7 @@
                     <img src="../../src/assets/img/viteImg.svg" alt="Vite" title="Vite">
                 </div>
             </article>
-            <article>
+            <article :class="isComputer ? '' : 'articleres'">
                 <p>Mobile</p>
                 <div class="tecnologias">
                     <img src="../../src/assets/img/dartImg.svg" alt="Dart" title="Dart">
@@ -49,11 +49,11 @@
 <style scoped>
 .div{
     width: 100%;
-
+    height: max-content;
 }
 section{
     margin: 0 auto;
-    height: 150vh;
+    height: max-content;
     width: 80%;
     background:transparent;
     display: flex;
@@ -65,11 +65,18 @@ h1{
     font-size: 3rem;
     color: #C0C0C0;
 }
+.h1res{
+    margin-left: 2.8rem;
+}
 .container{
     display: flex;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+}
+.sectionres{
+    margin: 0;
+    width: 100%;
 }
 article{
     display: flex;
@@ -82,6 +89,9 @@ article{
     border-radius: .8rem;
     border-bottom: 3px solid #9370db;
     border-right: 3px solid #9370db;
+}
+.articleres{
+    width: 80%;
 }
 p{
     margin: .5rem 0;

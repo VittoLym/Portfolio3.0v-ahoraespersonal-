@@ -1,4 +1,5 @@
 <script setup>
+    const props = defineProps(['isComputer'])
     import CV from '../../dist/pdfs/Alexander(Spanish).pdf'
 </script>
 
@@ -21,9 +22,9 @@
                 </p>
             </article>
             <article class="Vitto">
-                <a href="https://github.com/Vittossn" target="_blank"><h3>Github</h3> <img src="../assets/img/github.png" alt=""></a>
-                <a :href='CV' target="_blank"><h3>CV</h3><img src="../assets/img/cvImg.svg"  alt=""></a>
-                <a href="https://www.linkedin.com/in/alexander-javier-lopez-asson-949149247/" target="_blank"><h3>Linkedin</h3> <img src="../assets/img/linkedin.png" alt=""></a>
+                <a :class="isComputer ? '' : 'resA'" href="https://github.com/Vittossn" target="_blank"><h3>Github</h3> <img src="../assets/img/github.png" alt="Github Vitto"></a>
+                <a :class="isComputer ? '' : 'resA'" :href='CV' target="_blank"><h3>CV</h3><img src="../assets/img/cvImg.svg"  alt="cv Vitto"></a>
+                <a :class="isComputer ? '' : 'resA'" href="https://www.linkedin.com/in/alexander-javier-lopez-asson-949149247/" target="_blank"><h3>Linkedin</h3> <img src="../assets/img/linkedin.png" alt="Linkedin Vitto"></a>
             </article>
         </section>
     </div>
@@ -34,7 +35,6 @@ div{
     height: max-content;
     display: flex;
     border-bottom: solid 8px #9370db;
-    padding-bottom: 2rem;
 }
 section{
     margin: 0 auto;
@@ -75,6 +75,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.resA{
+    margin: 2rem 0;
 }
 a:hover{
     background-color: #9370db;
