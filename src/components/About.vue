@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+    import CV from '../../dist/pdfs/Alexander(Spanish).pdf'
+</script>
 
 <template>
     <div id="About">
@@ -20,7 +22,7 @@
             </article>
             <article class="Vitto">
                 <a href="https://github.com/Vittossn" target="_blank"><h3>Github</h3> <img src="../assets/img/github.png" alt=""></a>
-                <a href="../../public/pdfs/Alexander(English).pdf" target="_blank"><h3>CV</h3><img src="../assets/img/cvImg.svg" alt=""></a>
+                <a :href='CV' target="_blank"><h3>CV</h3><img src="../assets/img/cvImg.svg"  alt=""></a>
                 <a href="https://www.linkedin.com/in/alexander-javier-lopez-asson-949149247/" target="_blank"><h3>Linkedin</h3> <img src="../assets/img/linkedin.png" alt=""></a>
             </article>
         </section>
