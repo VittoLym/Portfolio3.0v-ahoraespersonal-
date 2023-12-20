@@ -127,7 +127,7 @@ const redirecRedes = (prop) =>{
     }
     p{
         text-align: start;
-        width: 50vw;
+        width: 70vw;
         margin-left: .5vw;
         font-size: 1.5rem;
         color: #C0C0C0;
