@@ -1,11 +1,18 @@
 <script setup>
-import { ref, onUnmounted } from 'vue';
+import { ref, onMounted, onBeforeMount } from 'vue';
 const dynamicText = ref(null)
 const prases = ['Frontend Dev','Backend Dev','Fullstack Dev','Rey del sexo','Junior Programer','Argentino','Re capo mal']
 
 let prasesIndex = 0;
 let charIndex = 0;
-let isDeleting = false
+let isDeleting = false;
+let vMenu = true;
+onBeforeMount(() => {
+  const widthTotal = window.innerWidth
+  if(widthTotal <= 600){
+    vMenu = false
+  }
+})
 const typeEffect = () => {
     const currentWord = prases[prasesIndex]
     const currentChar = currentWord.substring(0, charIndex)
@@ -40,7 +47,7 @@ const redirecRedes = (prop) =>{
             <article>
             </article>
             <article>
-                <div class="main">
+                <div class="main" v-if="vMenu">
                     <div class="up">
                         <button class="card1" @click="redirecRedes('https://github.com')">
                             <svg
@@ -85,7 +92,7 @@ const redirecRedes = (prop) =>{
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     main{
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
         background-image: url(../assets/img/prueba5.jpg);
         background-size: cover;

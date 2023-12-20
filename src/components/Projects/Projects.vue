@@ -61,11 +61,11 @@ div{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    height: 170vh;
+    height: 200vh;
 }
 .project {
     background-color: #202020;
-    height: 50vh;
+    height: 30%;
     width: 80vw;
     border-radius: 1rem;
     display: flex;
@@ -92,7 +92,7 @@ div{
     object-fit: fill;
 }
 .datos{
-    height: 46vh;
+    height: 90%;
     width: 100%;
     display: flex;
     flex-direction: column;

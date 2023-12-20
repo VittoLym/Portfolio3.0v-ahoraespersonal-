@@ -33,7 +33,7 @@ onBeforeUnmount(() => {
 </template>
 <style scoped>
 .container {
-    height: 210vh;
+    height: 240vh;
     width: 100%;
     display: flex;
     align-items: end;

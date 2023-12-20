@@ -7,6 +7,7 @@
   background-image: url(./assets/img/prueba7.svg);
   background-size: contain;
   scroll-behavior: smooth;
+  translate: no;
 }
 
 body {
