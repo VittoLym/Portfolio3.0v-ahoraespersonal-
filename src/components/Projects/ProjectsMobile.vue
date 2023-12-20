@@ -51,11 +51,13 @@
                 </article>
             </article>
         </article>
+        <h3 @click="redirect('https://github.com/Vittossn')">More Projects</h3>
     </div>
 </template>
 <style scoped>
 div{
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: max-content;
@@ -126,5 +128,22 @@ div{
     width: 50px;
     border-radius: 0;
     transition: all .3s ease;
+}
+h3{
+    font-family: Poppins, monospace;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    scale: 1.1;
+    box-shadow: rgba(193, 163, 98, 0.4) 0px 0px 20px;
+    outline: none;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    background-color: #9340db;
+    border-radius: .8rem;
 }
 </style>
