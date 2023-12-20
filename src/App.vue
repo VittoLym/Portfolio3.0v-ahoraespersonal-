@@ -30,6 +30,9 @@ onMounted(()=>{
 <template>
     <Navbar :showNav="showNav"/>
     <Header ref="header" ></Header>
+    <Layout ref="layout" :toggleNav="toggleNav" />
+    <Skills ref="skills" />
+    <About ref="about"/>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeMount } from 'vue';
+import { ref, onBeforeMount } from 'vue';
 const dynamicText = ref(null)
 const prases = ['Frontend Dev','Backend Dev','Fullstack Dev','Rey del sexo','Junior Programer','Argentino','Re capo mal']
 
@@ -114,11 +114,11 @@ const redirecRedes = (prop) =>{
         position: absolute;
         content: "";
         right: -8px;
-        top: 50%;
+        top: 60%;
         height: 30px;
         width: 5px;
         background: #C0C0C0 ;
-        transform: translateY(-45%);
+        transform: translateY(-65%);
     }
     article{
         display: flex;
@@ -132,6 +132,7 @@ const redirecRedes = (prop) =>{
     }
     p{
         text-align: start;
+        width: 70vw;
         margin-left: .5vw;
         font-size: 1.5rem;
         color: #C0C0C0;
