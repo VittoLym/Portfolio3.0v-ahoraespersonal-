@@ -15,7 +15,7 @@ const toggleNav = (valor) => {
 }
 onBeforeMount(() => {
   const widthTotal = window.innerWidth
-  if(widthTotal <= 600){
+  if(widthTotal <= 800){
     isComputer.value = false
   }
 })
