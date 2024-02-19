@@ -59,7 +59,7 @@ article{
     height: max-content;
     width: 100%;
     display: flex;
-    align-items: end;
+    align-items: start;
     flex-direction: column;
     margin-bottom: 2rem;
 }
@@ -106,12 +106,13 @@ h3{
 }
 p{
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #C0C0C0;
     margin: 0;
+    margin-left: 2%;
     margin-bottom: .5rem;
     text-align: start;
-    width: 71%;
+    width: 95%;
 }
 span{
     color: #9370db;
